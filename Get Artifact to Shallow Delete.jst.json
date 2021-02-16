@@ -1,0 +1,538 @@
+{
+  "name": "Get Artifact to Shallow Delete",
+  "incoming": [
+    {
+      "$id": "artifactBundle",
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string",
+          "examples": [
+            "c599882c87c148c9933cdb24"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "examples": [
+            "complete"
+          ]
+        },
+        "artifactBundle": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "bundles"
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "examples": [
+                      "directory"
+                    ]
+                  },
+                  "content": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "examples": [
+                            "ac_agenda_jobs"
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "examples": [
+                            "directory"
+                          ]
+                        },
+                        "content": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "examples": [
+                                  "For Loop%2Ejson"
+                                ]
+                              },
+                              "type": {
+                                "type": "string",
+                                "examples": [
+                                  "file"
+                                ]
+                              },
+                              "content": {
+                                "type": "string",
+                                "examples": [
+                                  "{\n  \"_id\": \"6025657d162d9b425662eb36\",\n  \"name\": \"For Loop\",\n  \"data\": {\n    \"description\": \"\",\n    \"workflowId\": \"For Loop\",\n    \"formId\": \"For Loop\",\n    \"formData\": {},\n    \"gbac\": {\n      \"write\": [],\n      \"read\": []\n    },\n    \"lastUpdated\": \"2021-02-11T17:17:24.495Z\",\n    \"modifiedById\": \"6005f1ebec37d3d5606f7b85\",\n    \"modifiedByUsername\": \"admin@pronghorn\"\n  },\n  \"lastModifiedBy\": \"983735005e2d:424\",\n  \"lastRunAt\": null,\n  \"nextRunAt\": null,\n  \"priority\": 0,\n  \"repeatInterval\": null,\n  \"repeatTimezone\": null,\n  \"type\": \"normal\"\n}"
+                                ]
+                              }
+                            },
+                            "required": []
+                          }
+                        }
+                      },
+                      "required": []
+                    }
+                  }
+                },
+                "required": []
+              }
+            },
+            "update": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "README%2Emd"
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "examples": [
+                      "file"
+                    ]
+                  },
+                  "content": {
+                    "type": "string",
+                    "examples": [
+                      "<!-- This is a comment in md (Markdown) format, it will not be visible to the end user -->\n\n<!-- Update the below line with your Pre-Built name -->\n# Pre-Built Name\n\n<!-- Leave TOC intact unless you've added or removed headers -->\n## Table of Contents\n\n* [Overview](#overview)\n* [Installation Prerequisites](#installation-prerequisites)\n* [Requirements](#requirements)\n* [Features](#features)\n* [Future Enhancements](#future-enhancements)\n* [How to Install](#how-to-install)\n* [How to Run](#how-to-run)\n* [Additional Information](#additional-information)\n\n## Overview\n\n<!-- Write a few sentences about the Pre-Built and explain the use case(s) -->\n<!-- Avoid using the word Artifact%2E Please use Pre-Built, Pre-Built Transformation or Pre-Built Automation -->\n<!-- Ex%2E: The Migration Wizard enables IAP users to conveniently move their automation use cases between different IAP environments -->\n<!-- (e%2Eg%2E from Dev to Pre-Production or from Lab to Production)%2E -->\n\n<!-- Workflow(s) Image Placeholder - TO BE ADDED DIRECTLY TO GitLab -->\n<!-- REPLACE COMMENT BELOW WITH IMAGE OF YOUR MAIN WORKFLOW -->\n<!--\n<table><tr><td>\n  <img src=\"./images/workflow.png\" alt=\"workflow\" width=\"800px\">\n</td></tr></table>\n-->\n<!-- REPLACE COMMENT ABOVE WITH IMAGE OF YOUR MAIN WORKFLOW -->\n\n<!-- ADD ESTIMATED RUN TIME HERE -->\n<!-- e%2Eg%2E Estimated Run Time: 34 min%2E -->\n_Estimated Run Time_:\n\n## Installation Prerequisites\n\nUsers must satisfy the following pre-requisites:\n\n<!-- Include any other required apps or adapters in this list -->\n<!-- Ex%2E: EC2 Adapter -->\n* Itential Automation Platform\n  * `^2020%2Ex%2Ex`\n\n## Requirements\n\nThis Pre-Built requires the following:\n\n<!-- Unordered list highlighting the requirements of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * cisco ios device -->\n<!-- * Ansible or NSO (with F5 NED) * -->\n\n## Features\n\nThe main benefits and features of the Pre-Built are outlined below%2E\n\n<!-- Unordered list highlighting the most exciting features of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * Automatically checks for device type -->\n<!-- * Displays dry-run to user (asking for confirmation) prior to pushing config to the device -->\n<!-- * Verifies downloaded file integrity (using md5), will try to download again if failed -->\n\n\n## Future Enhancements\n\n<!-- OPTIONAL - Mention if the Pre-Built will be enhanced with additional features on the road map -->\n<!-- Ex%2E: This Pre-Built would support Cisco XR and F5 devices -->\n\n## How to Install\n\nTo install the Pre-Built:\n\n* Verify you are running a supported version of the Itential Automation Platform (IAP) as listed above in the [Requirements](#requirements) section in order to install the Pre-Built%2E \n* The Pre-Built can be installed from within App-Admin_Essential%2E Simply search for the name of your desired Pre-Built and click the install button (as shown below)%2E\n\n<!-- REPLACE BELOW WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n<!--\n<table><tr><td>\n  <img src=\"./images/install.png\" alt=\"install\" width=\"600px\">\n</td></tr></table>\n-->\n<!-- REPLACE ABOVE WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n\n<!-- OPTIONAL - Explain if external components are required outside of IAP -->\n<!-- Ex%2E: The Ansible roles required for this Pre-Built can be found in the repository located at https://gitlab%2Ecom/itentialopensource/pre-built-automations/hello-world -->\n\n## How to Run\n\nUse the following to run the Pre-Built:\n\n<!-- Explain the main entrypoint(s) for this Pre-Built: Automation Catalog item, Workflow, Postman, etc%2E -->\n\n## Additional Information\n\nPlease use your Itential Customer Success account if you need support when using this Pre-Built%2E\n"
+                    ]
+                  }
+                },
+                "required": []
+              }
+            }
+          },
+          "required": []
+        },
+        "initiator": {
+          "type": "string",
+          "examples": [
+            "admin@pronghorn"
+          ]
+        },
+        "artifactLink": {
+          "type": "string",
+          "examples": [
+            "/admin/artifacts/export/60256eb9ca09d002c0927e61"
+          ]
+        }
+      },
+      "required": []
+    }
+  ],
+  "outgoing": [
+    {
+      "$id": "formData",
+      "type": "object",
+      "properties": {
+        "selectArtifactsToBeShallowRemoved": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "artifact": {
+                "type": "string",
+                "examples": [
+                  "@disa/for-loop"
+                ]
+              }
+            },
+            "required": []
+          }
+        }
+      },
+      "required": []
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "method",
+      "library": "Array",
+      "method": "find",
+      "args": [
+        null,
+        "ƒ_query_1"
+      ],
+      "view": {
+        "row": 2,
+        "col": 1
+      }
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "from": {
+        "location": "incoming",
+        "name": "artifactBundle",
+        "ptr": "/artifactBundle/update"
+      },
+      "to": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "library": "Object",
+      "method": "getProperty",
+      "args": [
+        null,
+        "content"
+      ],
+      "view": {
+        "row": 2,
+        "col": 2
+      }
+    },
+    {
+      "id": 4,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 3,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "library": "JSON",
+      "method": "parse",
+      "args": [
+        null,
+        null
+      ],
+      "view": {
+        "row": 2,
+        "col": 3
+      }
+    },
+    {
+      "id": 6,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 3,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 5,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 7,
+      "type": "method",
+      "library": "Object",
+      "method": "getProperty",
+      "args": [
+        null,
+        "name"
+      ],
+      "view": {
+        "row": 3,
+        "col": 4
+      }
+    },
+    {
+      "id": 8,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 5,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 7,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 9,
+      "type": "declaration",
+      "library": "Array",
+      "method": "new Array",
+      "args": [],
+      "view": {
+        "row": 1,
+        "col": 5
+      },
+      "polymorphIndex": 0
+    },
+    {
+      "id": 10,
+      "type": "method",
+      "library": "Object",
+      "method": "setProperty",
+      "args": [
+        null,
+        "artifact",
+        null
+      ],
+      "view": {
+        "row": 2,
+        "col": 5
+      }
+    },
+    {
+      "id": 11,
+      "type": "declaration",
+      "library": "Object",
+      "method": "new Object",
+      "args": [
+        null
+      ],
+      "view": {
+        "row": 1,
+        "col": 4
+      }
+    },
+    {
+      "id": 12,
+      "type": "assign",
+      "from": {
+        "location": "declaration",
+        "name": 11,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 10,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 13,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 7,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 10,
+        "ptr": "/args/2/value"
+      }
+    },
+    {
+      "id": 14,
+      "type": "method",
+      "library": "Array",
+      "method": "push",
+      "args": [
+        null,
+        null
+      ],
+      "view": {
+        "row": 1,
+        "col": 6
+      }
+    },
+    {
+      "id": 15,
+      "type": "assign",
+      "from": {
+        "location": "declaration",
+        "name": 9,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 14,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 16,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 10,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 14,
+        "ptr": "/args/1/value"
+      }
+    },
+    {
+      "id": 17,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 14,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "outgoing",
+        "name": "formData",
+        "ptr": "/selectArtifactsToBeShallowRemoved"
+      }
+    }
+  ],
+  "functions": [
+    {
+      "name": "ƒ_query_1",
+      "incoming": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "examples": [
+                "README%2Emd"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "examples": [
+                "file"
+              ]
+            },
+            "content": {
+              "type": "string",
+              "examples": [
+                "<!-- This is a comment in md (Markdown) format, it will not be visible to the end user -->\n\n<!-- Update the below line with your Pre-Built name -->\n# Pre-Built Name\n\n<!-- Leave TOC intact unless you've added or removed headers -->\n## Table of Contents\n\n* [Overview](#overview)\n* [Installation Prerequisites](#installation-prerequisites)\n* [Requirements](#requirements)\n* [Features](#features)\n* [Future Enhancements](#future-enhancements)\n* [How to Install](#how-to-install)\n* [How to Run](#how-to-run)\n* [Additional Information](#additional-information)\n\n## Overview\n\n<!-- Write a few sentences about the Pre-Built and explain the use case(s) -->\n<!-- Avoid using the word Artifact%2E Please use Pre-Built, Pre-Built Transformation or Pre-Built Automation -->\n<!-- Ex%2E: The Migration Wizard enables IAP users to conveniently move their automation use cases between different IAP environments -->\n<!-- (e%2Eg%2E from Dev to Pre-Production or from Lab to Production)%2E -->\n\n<!-- Workflow(s) Image Placeholder - TO BE ADDED DIRECTLY TO GitLab -->\n<!-- REPLACE COMMENT BELOW WITH IMAGE OF YOUR MAIN WORKFLOW -->\n<!--\n<table><tr><td>\n  <img src=\"./images/workflow.png\" alt=\"workflow\" width=\"800px\">\n</td></tr></table>\n-->\n<!-- REPLACE COMMENT ABOVE WITH IMAGE OF YOUR MAIN WORKFLOW -->\n\n<!-- ADD ESTIMATED RUN TIME HERE -->\n<!-- e%2Eg%2E Estimated Run Time: 34 min%2E -->\n_Estimated Run Time_:\n\n## Installation Prerequisites\n\nUsers must satisfy the following pre-requisites:\n\n<!-- Include any other required apps or adapters in this list -->\n<!-- Ex%2E: EC2 Adapter -->\n* Itential Automation Platform\n  * `^2020%2Ex%2Ex`\n\n## Requirements\n\nThis Pre-Built requires the following:\n\n<!-- Unordered list highlighting the requirements of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * cisco ios device -->\n<!-- * Ansible or NSO (with F5 NED) * -->\n\n## Features\n\nThe main benefits and features of the Pre-Built are outlined below%2E\n\n<!-- Unordered list highlighting the most exciting features of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * Automatically checks for device type -->\n<!-- * Displays dry-run to user (asking for confirmation) prior to pushing config to the device -->\n<!-- * Verifies downloaded file integrity (using md5), will try to download again if failed -->\n\n\n## Future Enhancements\n\n<!-- OPTIONAL - Mention if the Pre-Built will be enhanced with additional features on the road map -->\n<!-- Ex%2E: This Pre-Built would support Cisco XR and F5 devices -->\n\n## How to Install\n\nTo install the Pre-Built:\n\n* Verify you are running a supported version of the Itential Automation Platform (IAP) as listed above in the [Requirements](#requirements) section in order to install the Pre-Built%2E \n* The Pre-Built can be installed from within App-Admin_Essential%2E Simply search for the name of your desired Pre-Built and click the install button (as shown below)%2E\n\n<!-- REPLACE BELOW WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n<!--\n<table><tr><td>\n  <img src=\"./images/install.png\" alt=\"install\" width=\"600px\">\n</td></tr></table>\n-->\n<!-- REPLACE ABOVE WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n\n<!-- OPTIONAL - Explain if external components are required outside of IAP -->\n<!-- Ex%2E: The Ansible roles required for this Pre-Built can be found in the repository located at https://gitlab%2Ecom/itentialopensource/pre-built-automations/hello-world -->\n\n## How to Run\n\nUse the following to run the Pre-Built:\n\n<!-- Explain the main entrypoint(s) for this Pre-Built: Automation Catalog item, Workflow, Postman, etc%2E -->\n\n## Additional Information\n\nPlease use your Itential Customer Success account if you need support when using this Pre-Built%2E\n"
+              ]
+            }
+          },
+          "required": [],
+          "$id": "element"
+        },
+        {
+          "title": "index",
+          "type": "number",
+          "optional": true,
+          "$id": "index"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  "README%2Emd"
+                ]
+              },
+              "type": {
+                "type": "string",
+                "examples": [
+                  "file"
+                ]
+              },
+              "content": {
+                "type": "string",
+                "examples": [
+                  "<!-- This is a comment in md (Markdown) format, it will not be visible to the end user -->\n\n<!-- Update the below line with your Pre-Built name -->\n# Pre-Built Name\n\n<!-- Leave TOC intact unless you've added or removed headers -->\n## Table of Contents\n\n* [Overview](#overview)\n* [Installation Prerequisites](#installation-prerequisites)\n* [Requirements](#requirements)\n* [Features](#features)\n* [Future Enhancements](#future-enhancements)\n* [How to Install](#how-to-install)\n* [How to Run](#how-to-run)\n* [Additional Information](#additional-information)\n\n## Overview\n\n<!-- Write a few sentences about the Pre-Built and explain the use case(s) -->\n<!-- Avoid using the word Artifact%2E Please use Pre-Built, Pre-Built Transformation or Pre-Built Automation -->\n<!-- Ex%2E: The Migration Wizard enables IAP users to conveniently move their automation use cases between different IAP environments -->\n<!-- (e%2Eg%2E from Dev to Pre-Production or from Lab to Production)%2E -->\n\n<!-- Workflow(s) Image Placeholder - TO BE ADDED DIRECTLY TO GitLab -->\n<!-- REPLACE COMMENT BELOW WITH IMAGE OF YOUR MAIN WORKFLOW -->\n<!--\n<table><tr><td>\n  <img src=\"./images/workflow.png\" alt=\"workflow\" width=\"800px\">\n</td></tr></table>\n-->\n<!-- REPLACE COMMENT ABOVE WITH IMAGE OF YOUR MAIN WORKFLOW -->\n\n<!-- ADD ESTIMATED RUN TIME HERE -->\n<!-- e%2Eg%2E Estimated Run Time: 34 min%2E -->\n_Estimated Run Time_:\n\n## Installation Prerequisites\n\nUsers must satisfy the following pre-requisites:\n\n<!-- Include any other required apps or adapters in this list -->\n<!-- Ex%2E: EC2 Adapter -->\n* Itential Automation Platform\n  * `^2020%2Ex%2Ex`\n\n## Requirements\n\nThis Pre-Built requires the following:\n\n<!-- Unordered list highlighting the requirements of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * cisco ios device -->\n<!-- * Ansible or NSO (with F5 NED) * -->\n\n## Features\n\nThe main benefits and features of the Pre-Built are outlined below%2E\n\n<!-- Unordered list highlighting the most exciting features of the Pre-Built -->\n<!-- EXAMPLE -->\n<!-- * Automatically checks for device type -->\n<!-- * Displays dry-run to user (asking for confirmation) prior to pushing config to the device -->\n<!-- * Verifies downloaded file integrity (using md5), will try to download again if failed -->\n\n\n## Future Enhancements\n\n<!-- OPTIONAL - Mention if the Pre-Built will be enhanced with additional features on the road map -->\n<!-- Ex%2E: This Pre-Built would support Cisco XR and F5 devices -->\n\n## How to Install\n\nTo install the Pre-Built:\n\n* Verify you are running a supported version of the Itential Automation Platform (IAP) as listed above in the [Requirements](#requirements) section in order to install the Pre-Built%2E \n* The Pre-Built can be installed from within App-Admin_Essential%2E Simply search for the name of your desired Pre-Built and click the install button (as shown below)%2E\n\n<!-- REPLACE BELOW WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n<!--\n<table><tr><td>\n  <img src=\"./images/install.png\" alt=\"install\" width=\"600px\">\n</td></tr></table>\n-->\n<!-- REPLACE ABOVE WITH IMAGE OF YOUR PUBLISHED PRE-BUILT -->\n\n<!-- OPTIONAL - Explain if external components are required outside of IAP -->\n<!-- Ex%2E: The Ansible roles required for this Pre-Built can be found in the repository located at https://gitlab%2Ecom/itentialopensource/pre-built-automations/hello-world -->\n\n## How to Run\n\nUse the following to run the Pre-Built:\n\n<!-- Explain the main entrypoint(s) for this Pre-Built: Automation Catalog item, Workflow, Postman, etc%2E -->\n\n## Additional Information\n\nPlease use your Itential Customer Success account if you need support when using this Pre-Built%2E\n"
+                ]
+              }
+            },
+            "required": []
+          },
+          "$id": "array",
+          "optional": true
+        },
+        {
+          "$id": "thisArg",
+          "type": "object",
+          "properties": {},
+          "isContext": true
+        }
+      ],
+      "outgoing": [
+        {
+          "title": "return",
+          "type": "boolean",
+          "$id": "return"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "type": "method",
+          "library": "Equality",
+          "method": "identity",
+          "args": [
+            null,
+            "package.json"
+          ],
+          "view": {
+            "row": 1,
+            "col": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "element",
+            "ptr": "/name"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 3,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "outgoing",
+            "name": "return",
+            "ptr": ""
+          }
+        }
+      ],
+      "functions": [],
+      "view": {
+        "col": 2,
+        "row": 5
+      },
+      "id": "ƒ_query_1",
+      "comments": []
+    }
+  ],
+  "view": {
+    "col": 6,
+    "row": 5
+  },
+  "description": "",
+  "comments": [],
+  "version": "3.13.0"
+}
